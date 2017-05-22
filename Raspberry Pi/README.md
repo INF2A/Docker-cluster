@@ -1,4 +1,10 @@
 # Raspberry Pi
+
+mini handleinding voor Remco:
+1.eerste hypriot flashen met config map. //check of wlan0 en eth1 meekunnen worden gecopyt
+	1.1uitleg config map // wat kun je aanpassen aan elk bestand
+2.dan handleing van Remco uitvoeren.
+
 Ipadress | localdns | location | master/slave
 --- | --- | --- | ---
 192.168.1.1|	pi1.local|	amsterdam|	master
