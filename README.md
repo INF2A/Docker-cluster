@@ -3,8 +3,8 @@
 This project is made for a docker cluster.
 Build on a raspberry pi 3.
 
-#Docker
+# Docker
 
-#cluster(docker swarm)
+# cluster(docker swarm)
 
-#Smart mirror
+# Smart mirror
