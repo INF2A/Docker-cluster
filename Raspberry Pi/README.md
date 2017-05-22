@@ -1,6 +1,11 @@
 # Raspberry Pi
-
-
+192.168.1.1	pi1.local 	amsterdam	-	master
+192.168.1.2	pi2.local 	shanghai	-	slave
+192.168.1.3	pi3.local 	chicago		-	slave
+192.168.1.4	pi4.local 	santiago	-	slave
+192.168.1.5	pi5.local 	marie		-	slave
+192.168.1.6	pi6/local 	melbourne	-	slave
+192.168.1.7	pi7.local 	johannesburg	-	slave
 # Hypriot
 
 <a>https://github.com/hypriot/image-builder-rpi/releases/download/v1.4.0/hypriotos-rpi-v1.4.0.img.zip</a>
