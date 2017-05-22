@@ -5,6 +5,6 @@ Build on a raspberry pi 3.
 
 # Docker
 
-# cluster(docker swarm)
+# Cluster(docker swarm)
 
 # Smart mirror
