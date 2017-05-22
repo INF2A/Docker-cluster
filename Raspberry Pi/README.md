@@ -15,7 +15,7 @@ sudo apt-get install dnsmasq
 Add ‘denyinterfaces wlan0’ to the end of ‘sudo nano /etc/dhcpcd.conf’
 
 Edit the wlan0 section with ‘sudo nano /etc/network/interfaces.d/wlan0’
-	auto wlan0
+      auto wlan0
       allow-hotplug wlan0
       iface wlan0 inet static
       address 192.168.2.1
@@ -41,26 +41,27 @@ Put these lines in the file:
       
 sudo hostapd -B /etc/hostapd/hostapd.conf to start your access point in background
 
-Configure dnsmasq with the command ‘sudo nano /etc/dnsmasq.conf
+sudo nano /etc/dnsmasq.conf
 Put this in the file at the top
       interface = wlan0
       dhcp-range=192.168.2.10,192.168.2.250,255.255.255.0,12h (12 hour lease)
       
 sudo service dhcpcd start
 
-Enter command ‘sudo nano /etc/sysctl.conf’ and remove the # in the beginning of the line ‘net.ipv4.ip_forward=1’ this will    enable it on the next boot, use ‘sudo sh -c “echo 1 > /proc/sys/net/ipv4/ip_forward”’ to enable it now
+sudo nano /etc/sysctl.conf’ and remove the # in the beginning of the line ‘net.ipv4.ip_forward=1’ this will enable it on the next boot, use ‘sudo sh -c “echo 1 > /proc/sys/net/ipv4/ip_forward”’ to enable it now
 To share the eth0 connection with the wlan0 connection use these commands: 
-sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
-sudo iptables -A FORWARD -i eth0 -o wlan0 -m state --state RELATED,ESTABLISHED -j ACCEPT
-sudo iptables -A FORWARD -i wlan0 -o eth0 -j ACCEPT
-sudo sh -c “iptables-save > /etc/iptables.ipv4.nat” to safe the rules done above
-sudo nano /etc/rc.local and add above the line ‘exit 0’  the line :‘iptables-restore < /etc/iptables.ipv4.nat’
 
-???
-sudo iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE
-sudo iptables -A FORWARD -i eth1 -o eth0 -m state --state RELATED,ESTABLISHED -j ACCEPT
-sudo iptables -A FORWARD -i eth0 -o eth1 -j ACCEPT
-sudo iptables -A FORWARD -I eth0 -j ACCEPT
-sudo iptables -A FORWARD -I eth1 -j ACCEPT
-sudo iptables -A FORWARD -I wlan0 -j ACCEPT
+	sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+	sudo iptables -A FORWARD -i eth0 -o wlan0 -m state --state RELATED,ESTABLISHED -j ACCEPT
+	sudo iptables -A FORWARD -i wlan0 -o eth0 -j ACCEPT
+	sudo sh -c “iptables-save > /etc/iptables.ipv4.nat” to safe the rules done above
+	sudo nano /etc/rc.local and add above the line ‘exit 0’  the line :‘iptables-restore < /etc/iptables.ipv4.nat’
+
+	Unkown working commands :)
+	sudo iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE
+	sudo iptables -A FORWARD -i eth1 -o eth0 -m state --state RELATED,ESTABLISHED -j ACCEPT
+	sudo iptables -A FORWARD -i eth0 -o eth1 -j ACCEPT
+	sudo iptables -A FORWARD -I eth0 -j ACCEPT
+	sudo iptables -A FORWARD -I eth1 -j ACCEPT
+	sudo iptables -A FORWARD -I wlan0 -j ACCEPT
 ```
