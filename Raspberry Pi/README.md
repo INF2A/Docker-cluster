@@ -9,10 +9,8 @@ Ipadress | localdns | location | master/slave
 192.168.1.6|	pi6.local| 	melbourne|	slave
 192.168.1.7|	pi7.local| 	johannesburg|	slave
 # Hypriot
-
+We use the Hypriot version v1.4.0
 <a>https://github.com/hypriot/image-builder-rpi/releases/download/v1.4.0/hypriotos-rpi-v1.4.0.img.zip</a>
-
-hypriotos-rpi-v1.4.0.img
 
 ```
 sudo apt-get update
