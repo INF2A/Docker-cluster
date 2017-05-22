@@ -1,10 +1,9 @@
 # Raspberry Pi
-eerst handleiding volgen van Remco.
+
 
 # Hypriot
 
 <a>https://github.com/hypriot/image-builder-rpi/releases/download/v1.4.0/hypriotos-rpi-v1.4.0.img.zip</a>
-config files kopieren nadat image is gecopyt
 
 hypriotos-rpi-v1.4.0.img
 
