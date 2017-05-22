@@ -1,4 +1,4 @@
-# Raspberry pi
+# Raspberry Pi
 
 This project is made for a docker cluster.
 Build on a raspberry pi 3.
