@@ -6,6 +6,10 @@ config files kopieren nadat image is gecopyt
 
 hypriotos-rpi-v1.4.0.img
 
+```
+git status
+git add
+git commit
 
 
 1.	sudo apt-get update
@@ -58,3 +62,4 @@ hypriotos-rpi-v1.4.0.img
 25.	sudo iptables -A FORWARD -I eth1 -j ACCEPT
 26.	sudo iptables -A FORWARD -I wlan0 -j ACCEPT
 
+```
