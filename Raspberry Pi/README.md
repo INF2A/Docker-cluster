@@ -57,7 +57,7 @@ To share the eth0 connection with the wlan0 connection use these commands:
 	sudo sh -c “iptables-save > /etc/iptables.ipv4.nat” to safe the rules done above
 	sudo nano /etc/rc.local and add above the line ‘exit 0’  the line :‘iptables-restore < /etc/iptables.ipv4.nat’
 
-	Unkown working commands :)
+	Unknown working commands :)
 	sudo iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE
 	sudo iptables -A FORWARD -i eth1 -o eth0 -m state --state RELATED,ESTABLISHED -j ACCEPT
 	sudo iptables -A FORWARD -i eth0 -o eth1 -j ACCEPT
