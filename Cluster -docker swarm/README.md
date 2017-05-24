@@ -2,14 +2,16 @@
 
 <h1> Getting started</h1>
 First we start with setting up te master.<br />
-The ipadress that is used is 192.168.1.1. (https://github.com/INF2A/RPI-docker-cluster/tree/master/Raspberry%20Pi)
+The ipadress that is used for the master is 192.168.1.1.<br/>
+    
     docker swarm init --advertise-addr 192.168.1.1
+
 Output example:
 
     docker swarm join \
         --token SWMTKN-1-16f2amnxmybiimh4csu6hf0ldygbgnzt1bxdgvjw1wazw7nb5j-9z76dsjqa43rc7tzu8fjofqnj \
         192.168.1.1:2377
-
+*The token and ipadress can be different on your setup.
 
     sudo docker build -t helloworld .
 
@@ -23,5 +25,6 @@ Output example:
 
     docker service create --replicas 5 -p 8084:8084 --name helloworld --with-registry-auth 192.168.1.1:5000/helloworld
 
+Source: https://github.com/INF2A/RPI-docker-cluster/tree/master/Raspberry%20Pi <br/>
 Source: https://docs.docker.com/engine/swarm/swarm-tutorial/ <br />
 Source: https://hub.docker.com/r/silverwind/armhf-registry/
