@@ -12,7 +12,7 @@ Example:
     docker swarm join \
         --token SWMTKN-1-16f2amnxmybiimh4csu6hf0ldygbgnzt1bxdgvjw1wazw7nb5j-9z76dsjqa43rc7tzu8fjofqnj \
         192.168.1.1:2377
-<i>*The token and ip adress can be different on your setup.</i><br/>
+<i>*The token and ip adress can be different on your setup.</i><br/><br/>
 
 
 We will build a simple helloworld api. The api is build in java en make use of tomcat ARM. <br />
