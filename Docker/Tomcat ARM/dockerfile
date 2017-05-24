@@ -34,7 +34,7 @@ rm -rf  "tomcat/LICENSE" \
         "/tmp/*" \
         "/var/cache/apk/*"
 
-ADD apitime.war /tomcat/webapps
+ADD helloworld.war /tomcat/webapps
 ADD server.xml /tomcat/conf/server.xml
 EXPOSE 8080
 CMD ["/tomcat/bin/catalina.sh", "run"]
