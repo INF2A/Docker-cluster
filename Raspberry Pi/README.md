@@ -18,24 +18,21 @@ Ipadress | localdns | location | master/slave
 We use the Hypriot version v1.4.0</br>
 <a>https://github.com/hypriot/image-builder-rpi/releases/download/v1.4.0/hypriotos-rpi-v1.4.0.img.zip</a>
 
+# Configuration
+For this to work you need a usb network adapter connected to your Raspberry Pi.</br>
+Go to the config/master/root/etc/network/interfaces.d</br>
+Check if the config of eth0 is correct so you can make a ssh connection with the Raspberry Pi, if you will not use ssh you can just leave the config as it is.</br>
+Flash the master config from the config map to the sd card of your Raspberry PI.</br>
+Now start your Raspberry Pi and configure it as below to make it work like a router.</br>
+
 ```
 sudo apt-get update
 sudo apt-get install hostapd
 sudo apt-get install dhcpcd5
 sudo apt-get install dnsmasq
 
-This will ignore wlan0 when dhcpcd is running so it will not give him an Ip Address.
+This will ignore wlan0 when dhcpcd is running so it will not give him an Ip Address, because it is configured with a static one
 Add ‘denyinterfaces wlan0’ to the end of ‘sudo nano /etc/dhcpcd.conf’
-
-Here we give wlan0 a static IP:
-Edit the wlan0 section with ‘sudo nano /etc/network/interfaces.d/wlan0’
-      auto wlan0
-      allow-hotplug wlan0
-      iface wlan0 inet static
-      address 192.168.2.1
-      netmask 255.255.255.0
-      network 192.168.2.1
-      broadcast 192.168.2.255
       
 This will configure the Access Point on the Raspberry Pi:
 Configure hostapd with the command ‘sudo nano /etc/hostapd/hostapd.conf'
