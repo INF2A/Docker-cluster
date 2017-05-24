@@ -1,12 +1,12 @@
 # Cluster (docker swarm)
 
 <h1> Getting started</h1>
-First we start with setting up te master.<br />
+First we start by setting up te master.<br />
 The ip adress that is used for the master is 192.168.1.1<br/>
     
     docker swarm init --advertise-addr 192.168.1.1
 
-Put the output of the above commando in alle of your slaves.
+The commaand above will give you an output, you will need to put this output in alle of your slaves.
 Example:
 
     docker swarm join \
@@ -15,12 +15,12 @@ Example:
 <i>*The token and ip adress can be different on your setup.</i><br/><br/>
 
 
-We will build a simple helloworld api. The api is build in java en make use of tomcat ARM. <br />
+We will build a simple helloworld api. The api is build in java en makes use of tomcat ARM. <br />
 The api can be found in the docker folder: https://github.com/INF2A/RPI-docker-cluster/tree/master/Docker/Tomcat%20ARM
     
     sudo docker build -t helloworld .
     
- After that the build is done we will make a local registry for this images.<br/>
+ After the build is done we will make a local registry for this images.<br/>
  The local registry make it possible to share images in the swarm.<br/>
 
     docker run -d -v /srv/registry/data:/data -p 5000:5000 --name registry silverwind/armhf-registry
