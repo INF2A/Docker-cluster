@@ -48,8 +48,6 @@ Put these lines in the file:
       rsn_pairwise=CCMP 
       wpa_pairwise=CCMP
       ignore_broadcast_ssid=0 #send out your ssid as visible
-      
-sudo hostapd -B /etc/hostapd/hostapd.conf to start your access point, -B will run it in the background
 
 Configure the dhcp server on the Raspberry Pi:
 
