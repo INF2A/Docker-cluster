@@ -1,1 +1,26 @@
 # Cluster (docker swarm)
+
+1. docker swarm init --advertise-addr 192.168.1.1
+uitvoer:
+
+    docker swarm join \
+        --token SWMTKN-1-16f2amnxmybiimh4csu6hf0ldygbgnzt1bxdgvjw1wazw7nb5j-9z76dsjqa43rc7tzu8fjofqnj \
+        192.168.1.1:2377
+
+Invoeren op slave:
+
+    docker swarm join \
+        --token SWMTKN-1-16f2amnxmybiimh4csu6hf0ldygbgnzt1bxdgvjw1wazw7nb5j-9z76dsjqa43rc7tzu8fjofqnj \
+        192.168.1.1:2377
+
+2. sudo docker build -t apitime .
+
+3. docker run -d -v /srv/registry/data:/data -p 5000:5000 --name registry silverwind/armhf-registry
+
+4. docker login --username pirate --password hypriot 192.168.1.1:5000
+
+5. docker tag apitime 192.168.1.1:5000/apitime
+
+6. docker push 192.168.1.1:5000/apitime
+
+7. docker service create --replicas 5 -p 8084:8084 --name apitime --with-registry-auth 192.168.1.1:5000/apitime
