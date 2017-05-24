@@ -89,4 +89,8 @@ To share the eth1(network adapter) connection with the eth0 connection you need 
 	sudo iptables -A FORWARD -I eth0 -j ACCEPT
 	sudo iptables -A FORWARD -I eth1 -j ACCEPT
 	sudo iptables -A FORWARD -I wlan0 -j ACCEPT
-```
+	
+Start the Access Point service:
+
+	sudo hostapd -B /etc/hostapd/hostapd.conf
+<i>-B will make it run in the background</i>
