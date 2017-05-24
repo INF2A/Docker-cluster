@@ -1,4 +1,6 @@
 # Cluster (docker swarm)
+
+<h1> Getting started</h1>
 docker swarm init --advertise-addr 192.168.1.1
 uitvoer:
 
