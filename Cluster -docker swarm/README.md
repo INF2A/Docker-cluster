@@ -14,7 +14,8 @@ Output example:
         
 <i>*The token and ip adress can be different on your setup.</i>
 
-We wil use a simple helloworld api. The api is build in java en make use of tomcat. <br />
+We will build a simple helloworld api. The api is build in java en make use of tomcat. <br />
+The api can be found in the docker folder: https://github.com/INF2A/RPI-docker-cluster/tree/master/Docker/Tomcat%20ARM
     
     sudo docker build -t helloworld .
     
