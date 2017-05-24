@@ -24,5 +24,5 @@ docker push 192.168.1.1:5000/helloworld
 
 docker service create --replicas 5 -p 8084:8084 --name helloworld --with-registry-auth 192.168.1.1:5000/helloworld
 
-Source: https://docs.docker.com/engine/swarm/swarm-tutorial/
+Source: https://docs.docker.com/engine/swarm/swarm-tutorial/ <br />
 Source: https://hub.docker.com/r/silverwind/armhf-registry/
