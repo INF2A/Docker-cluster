@@ -14,11 +14,11 @@ Output example:
         
 <i>*The token and ip adress can be different on your setup.</i>
 
-
+We wil use a simple helloworld api. The api is build in java en make use of tomcat. <br />
+    
     sudo docker build -t helloworld .
     
  
-
 
     docker run -d -v /srv/registry/data:/data -p 5000:5000 --name registry silverwind/armhf-registry
 
