@@ -2,7 +2,7 @@
 
 <h1> Getting started</h1>
 First we start with setting up te master.<br />
-The ip adress that is used for the master is 192.168.1.1.<br/>
+The ip adress that is used for the master is 192.168.1.1<br/>
     
     docker swarm init --advertise-addr 192.168.1.1
 
