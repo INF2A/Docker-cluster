@@ -36,5 +36,5 @@ rm -rf  "tomcat/LICENSE" \
 
 ADD apitime.war /tomcat/webapps
 ADD server.xml /tomcat/conf/server.xml
-EXPOSE 8084
+EXPOSE 8080
 CMD ["/tomcat/bin/catalina.sh", "run"]
