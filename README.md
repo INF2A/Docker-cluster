@@ -17,3 +17,4 @@ registery
 helloworld
 # Smart mirror
 link naar smart mirror
+https://github.com/INF2A/Smart-mirror
