@@ -13,7 +13,7 @@ Ipadress | localdns | location | master/slave
 We use the Hypriot version v1.4.0</br>
 <a>https://github.com/hypriot/image-builder-rpi/releases/download/v1.4.0/hypriotos-rpi-v1.4.0.img.zip</a>
 
-# Configuration
+# Configuration of your master to work as an Access Point
 For this to work you need a usb network adapter connected to your Raspberry Pi.</br>
 Go to the config/master/root/etc/network/interfaces.d</br>
 Check if the config of eth0 is correct so you can make a ssh connection with the Raspberry Pi, if you will not use ssh you can just leave the config as it is.</br>
@@ -26,8 +26,10 @@ Now start your Raspberry Pi and run the following commands to install the packag
 	sudo apt-get install dhcpcd5
 	sudo apt-get install dnsmasq
 
+Add ‘denyinterfaces wlan0’ to the end of:
+
+	sudo nano /etc/dhcpcd.conf
 This will ignore wlan0 when dhcpcd is running so it will not give him an Ip Address, because it is configured with a static one
-Add ‘denyinterfaces wlan0’ to the end of ‘sudo nano /etc/dhcpcd.conf’
       
 The Access Point needs to be configured, you can do this by using this command.
 
