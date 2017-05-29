@@ -32,8 +32,12 @@ Because the connection is not secure we have to make/change the file:
 And edit the following line in the file.
 
     {"insecure-registries" : ["192.168.1.1:5000"]}
+    
+To use the local registry you must login.
 
     docker login --username pirate --password hypriot 192.168.1.1:5000
+    
+    
 
     docker tag apitime 192.168.1.1:5000/helloworld
 
