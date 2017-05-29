@@ -16,5 +16,4 @@ Commando's voor docker swarm aanmaken
 registery
 helloworld
 # Smart mirror
-link naar smart mirror
-https://github.com/INF2A/Smart-mirror
+More information about the SmartMirror: https://github.com/INF2A/Smart-mirror
