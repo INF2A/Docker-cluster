@@ -1,5 +1,6 @@
-# Raspberry Pi
+Algemeen verhaal van het project.
 
+# Raspberry Pi
 This project is made for a docker cluster.
 Build on a raspberry pi 3 ARM.
 
@@ -8,12 +9,15 @@ accespoint
 device-init.yaml ??
 
 # 3D print cluster
-Bas bestanden toevoegen
+Bas printscreens van de bestanden.
+
 # Docker
 Eric helloworld laten zien
 # Cluster(docker swarm)
+
 Commando's voor docker swarm aanmaken
 registery
 helloworld
+
 # Smart mirror
 More information about the SmartMirror: https://github.com/INF2A/Smart-mirror
