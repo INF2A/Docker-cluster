@@ -12,7 +12,8 @@ device-init.yaml ??
 Bas printscreens van de bestanden.
 
 # Docker
-Eric helloworld laten zien
+Eric helloworld laten zien<br>
+tomcat
 # Cluster(docker swarm)
 
 Commando's voor docker swarm aanmaken
