@@ -7,6 +7,7 @@ The ip adress that is used for the master is 192.168.1.1<br/>
     docker swarm init --advertise-addr 192.168.1.1
 
 The commaand above will give you an output, you will need to put this output in alle of your slaves.
+
 Example:
 
     docker swarm join \
