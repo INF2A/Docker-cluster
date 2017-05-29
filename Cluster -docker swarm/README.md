@@ -37,11 +37,15 @@ To use the local registry you must login.
 
     docker login --username pirate --password hypriot 192.168.1.1:5000
     
-    
+Tag the image you want to add to the local registry.(add the ip adress of the local registry)
 
     docker tag apitime 192.168.1.1:5000/helloworld
 
+Now push the image to the local registry.
+
     docker push 192.168.1.1:5000/helloworld
+
+Create a service with the image form the local registry.
 
     docker service create --replicas 5 -p 8080:8080 --name helloworld --with-registry-auth 192.168.1.1:5000/helloworld
 
