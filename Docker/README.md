@@ -9,20 +9,24 @@ First we make a dockerfile.
 And put the following information in the dockerfile.
 
     FROM maxleiko/armhf-alpine-java:latest
+
     RUN apk update && \
     apk add ca-certificates && \
     update-ca-certificates && \
-    wget https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.0.M20/bin/apache-tomcat-9.0.0.M20.tar.gz && \
-    tar zxf apache-tomcat-*.tar.gz && \
-    rm apache-tomcat-*.tar.gz && \
-    mv apache-tomcat* tomcat
+    wget https://github.com/INF2A/RPI-docker-cluster/raw/master/Docker/Apache%20tomcat/apache-tomcat-9.tar.gz && \
+    tar zxf apache-tomcat-9.tar.gz && \
+    rm apache-tomcat-9.tar.gz && \
+    mv apache-tomcat* tomcat && \
 
-    //change to wget.
-    ADD calendar.war /tomcat/webapps
-    ADD server.xml /tomcat/conf/server.xml
+    wget https://github.com/INF2A/RPI-docker-cluster/raw/master/Docker/Api%20files/helloworldapi/helloworldapi.war && \
+    mv helloworldapi.war /tomcat/webapps/ && \
+
+    rm -rf  "/tmp/*" \
+            "/var/cache/apk/*"
 
     EXPOSE 8080
     CMD ["/tomcat/bin/catalina.sh", "run"]
+
 
 Now we can build the images.
       
