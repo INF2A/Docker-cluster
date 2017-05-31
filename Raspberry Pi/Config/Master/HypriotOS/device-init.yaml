@@ -1,0 +1,19 @@
+#device-init.yaml on the pi /hypriot
+# hostname for your HypriotOS device
+hostname: amsterdam
+
+# optional wireless network settings
+wifi:
+  interfaces:
+#     wlan0:
+#       ssid: "MyNetwork"
+#       password: "secret_password"
+
+runcmd:
+
+  - "sudo timedatectl set-timezone Etc/GMT-2"
+  - "sudo cp /etc/dns.conf /etc/resolv.conf"
+  - "sudo cp /etc/dns-host.conf /etc/hosts"
+  - "sudo hostapd -B /etc/hostapd/hostapd.conf"
+  - "sudo docker restart registry"
+
