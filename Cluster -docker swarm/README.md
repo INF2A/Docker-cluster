@@ -1,4 +1,6 @@
 # Cluster (docker swarm)
+With this tutorial you can setup a docker swarm and a local registry.<br/>
+More information can be found at the end of the tutorial(source).
 
 <h1> Getting started</h1>
 First we start by setting up te master.<br />
