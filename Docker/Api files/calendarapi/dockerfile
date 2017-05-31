@@ -8,7 +8,7 @@ tar zxf apache-tomcat-9.tar.gz && \
 rm apache-tomcat-9.tar.gz && \
 mv apache-tomcat* tomcat && \
 
-wget https://github.com/INF2A/RPI-docker-cluster/blob/master/Docker/Api%20files/calendarapi/calendarapi.war?raw=true && \
+wget https://github.com/INF2A/RPI-docker-cluster/raw/master/Docker/Api%20files/calendarapi/calendarapi.war && \
 mv calendarapi.war /tomcat/webapps/ && \
 
 wget https://raw.githubusercontent.com/INF2A/RPI-docker-cluster/master/Docker/Api%20files/calendarapi/server.xml && \
@@ -16,8 +16,9 @@ mv server.xml /tomcat/conf/server.xml && \
 rm -rf  "/tmp/*" \
         "/var/cache/apk/*" && \
 
-wget https://github.com/INF2A/RPI-docker-cluster/blob/master/Docker/Api%20files/calendarapi/StoredCredential?raw=true && \
-mv StoredCredential /tomcat/bin/credentials/calendar-java-calendar/StoredCredential
+wget https://github.com/INF2A/RPI-docker-cluster/raw/master/Docker/Api%20files/calendarapi/StoredCredential && \
+mkdir -p /tomcat/bin/credentials/calendar-java-calendar/ && \
+mv StoredCredential /tomcat/bin/credentials/calendar-java-calendar/
 
 EXPOSE 8081
 CMD ["/tomcat/bin/catalina.sh", "run"]
