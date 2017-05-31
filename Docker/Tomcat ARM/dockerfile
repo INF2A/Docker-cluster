@@ -7,34 +7,6 @@ wget https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.0.M20/bin/apache-tomca
 tar zxf apache-tomcat-*.tar.gz && \
 rm apache-tomcat-*.tar.gz && \
 mv apache-tomcat* tomcat && \
-rm -rf  "tomcat/LICENSE" \
-        "tomcat/NOTICE" \
-        "tomcat/RELEASE-NOTES" \
-        "tomcat/RUNNING.txt" \
-        "tomcat/webapps/ROOT" \
-        "tomcat/webapps/examples" \
-        "tomcat/webapps/ROOT" \
-        "tomcat/webapps/docs" \
-        "tomcat/webapps/host-manager" \
-        "tomcat/webapps/manager" \
-        "opt/jdk-8u111-b14/COPYRIGHT" \
-        "opt/jdk-8u111-b14/README.html " \
-        "opt/jdk-8u111-b14/LICENSE" \
-        "opt/jdk-8u111-b14/THIRDPARTYLICENSEREADME.txt" \
-        "opt/jdk-8u111-b14/man" \
-        "opt/jdk-8u111-b14/db" \
-        "opt/jdk-8u111-b14/jre/lib/fonts" \
-        "opt/jdk-8u111-b14/release" \
-        "opt/jdk-8u111-b14/include" \
-        "opt/jdk-8u111-b14/lib/tools.jar" \
-        "opt/jdk-8u111-b14/lib/ct.sym" \
-        "opt/jdk-8u111-b14/libsa-jdi.jar" \
-        "opt/jdk-8u111-b14/jre/lib/ext" \
-        "opt/jdk/*src.zip"      \
-        "/tmp/*" \
-        "/var/cache/apk/*"
 
-ADD helloworld.war /tomcat/webapps
-ADD server.xml /tomcat/conf/server.xml
 EXPOSE 8080
 CMD ["/tomcat/bin/catalina.sh", "run"]
