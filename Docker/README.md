@@ -8,8 +8,7 @@ First we make a dockerfile.
 
 And put the following information in the dockerfile.
 
-FROM maxleiko/armhf-alpine-java:latest
-
+    FROM maxleiko/armhf-alpine-java:latest
     RUN apk update && \
     apk add ca-certificates && \
     update-ca-certificates && \
@@ -40,9 +39,6 @@ Go to your to.
 And you will see the following line
 
     Hello World
-
-
-
 
 # Apache
 In this folder you can find tomcat apache 9.0.
