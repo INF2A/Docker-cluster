@@ -14,4 +14,3 @@ runcmd:
   - "sudo timedatectl set-timezone Etc/GMT-2"
   - "sudo cp /etc/dns.conf /etc/resolv.conf"
   - "sudo cp /etc/dns-host.conf /etc/hosts"
-  - "sudo docker restart registry"
