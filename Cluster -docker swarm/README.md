@@ -25,12 +25,12 @@ The api can be found in the docker folder: https://github.com/INF2A/RPI-docker-c
     
  After the build is done we will make a local registry for this images.<br/>
  The local registry make it possible to share images in the swarm.<br/>
-
-    docker run -d -v /srv/registry/data:/data -p 5000:5000 --name registry silverwind/armhf-registry
+ 
+        docker run -d -v /srv/registry/data:/data -p 5000:5000 --name registry silverwind/armhf-registry
     
 Because the connection is not secure we have to make/change the file: 
     
-    nano root/etc/docker/daemon.json
+    nano /etc/docker/daemon.json
     
 And edit the following line in the file.
 
