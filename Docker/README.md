@@ -1,5 +1,5 @@
 # Docker
-With this tutorial you can make a container with tomcat and use the helloworldapi.<br/>
+With this tutorial you can make a container(ARM) with tomcat and use the helloworldapi.<br/>
 
 <h1>Getting started</h1>
 First we make a dockerfile.
@@ -20,6 +20,10 @@ And put the following information in the dockerfile.
 
     wget https://github.com/INF2A/RPI-docker-cluster/raw/master/Docker/Api%20files/helloworldapi/helloworldapi.war && \
     mv helloworldapi.war /tomcat/webapps/ && \
+    
+    
+    wget https://raw.githubusercontent.com/INF2A/RPI-docker-cluster/master/Docker/Api%20files/helloworldapi/server.xml && \
+    mv server.xml /tomcat/conf/server.xml && \
 
     rm -rf  "/tmp/*" \
             "/var/cache/apk/*"
