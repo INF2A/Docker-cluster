@@ -30,7 +30,7 @@ The api can be found in the docker folder: https://github.com/INF2A/RPI-docker-c
     
 Because the connection is not secure we have to make/change the file: 
     
-    root/etc/docker/daemon.json
+    nano root/etc/docker/daemon.json
     
 And edit the following line in the file.
 
