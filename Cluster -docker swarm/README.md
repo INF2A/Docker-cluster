@@ -3,6 +3,7 @@ With this tutorial you can setup a docker swarm and a local registry.<br/>
 More information can be found at the end of the tutorial(source).
 
 <h1> Getting started</h1>
+<h3>Master setup</h3>
 First we start by setting up te master.<br />
 The ip adress that is used for the master is 192.168.1.1<br/>
     
@@ -56,6 +57,28 @@ Create a service with the image form the local registry.
 Go to the following url
 
     ipadress:8080/helloworldapi/helloworld
+    
+<h3>Slave setup</h3>
+Now we are going to setup te slave.<br/>
+Enter the following code in the commandline.
+    
+    docker swarm join \
+    --token SWMTKN-1-4gwqmujyg9u5ipqou7sribn62v5ujhpyzbjn64mg8emq1lukno-0g13aglovlw64rh6whwzqj5d2 \
+    192.168.1.1:2377
+
+Because the connection to the registry is not secure we have to make/change the file: 
+    
+    sudo nano /etc/docker/daemon.json
+    
+And edit the following line in the file.
+
+    {"insecure-registries" : ["192.168.1.1:5000"]}
+    
+To use the registry you must login.
+
+    docker login --username pirate --password hypriot 192.168.1.1:5000
+
+Done.:)
 
 Source: https://github.com/INF2A/RPI-docker-cluster/tree/master/Raspberry%20Pi <br/>
 Source: https://docs.docker.com/engine/swarm/swarm-tutorial/ <br />
