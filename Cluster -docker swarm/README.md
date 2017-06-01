@@ -42,7 +42,7 @@ To use the local registry you must login.
     
 Tag the image you want to add to the local registry.(add the ip adress of the local registry)
 
-    docker tag apitime 192.168.1.1:5000/helloworld
+    docker tag helloworld 192.168.1.1:5000/helloworld
 
 Now push the image to the local registry.
 
