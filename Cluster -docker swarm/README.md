@@ -49,14 +49,6 @@ Tag the image you want to add to the local registry.(add the ip adress of the lo
 Now push the image to the local registry.
 
     docker push 192.168.1.1:5000/helloworld
-
-Create a service with the image form the local registry.
-
-    docker service create --replicas 5 -p 8080:8080 --name helloworld --with-registry-auth 192.168.1.1:5000/helloworld
-    
-Go to the following url
-
-    ipadress:8080/helloworldapi/helloworld
     
 <h3>Slave setup</h3>
 Now we are going to setup te slave.<br/>
@@ -78,8 +70,16 @@ To use the registry you must login.
 
     docker login --username pirate --password hypriot 192.168.1.1:5000
 
-Done.:)
+<h3>Docker swarm</h3>
 
+Create a service with the image form the registry.
+
+    docker service create --replicas 5 -p 8080:8080 --name helloworld --with-registry-auth 192.168.1.1:5000/helloworld
+    
+Go to the following url
+
+    ipadress:8080/helloworldapi/helloworld
+    
 Source: https://github.com/INF2A/RPI-docker-cluster/tree/master/Raspberry%20Pi <br/>
 Source: https://docs.docker.com/engine/swarm/swarm-tutorial/ <br />
 Source: https://hub.docker.com/r/silverwind/armhf-registry/
