@@ -11,10 +11,11 @@ The ip adress that is used for the master is 192.168.1.1<br/>
 The commaand above will give you an output, you will need to put this output in alle of your slaves.
 
 Example:
-
+    
     docker swarm join \
-        --token SWMTKN-1-16f2amnxmybiimh4csu6hf0ldygbgnzt1bxdgvjw1wazw7nb5j-9z76dsjqa43rc7tzu8fjofqnj \
-        192.168.1.1:2377
+    --token SWMTKN-1-4gwqmujyg9u5ipqou7sribn62v5ujhpyzbjn64mg8emq1lukno-0g13aglovlw64rh6whwzqj5d2 \
+    192.168.1.1:2377
+    
 <i>*The token and ip adress can be different on your setup.</i><br/><br/>
 
 
