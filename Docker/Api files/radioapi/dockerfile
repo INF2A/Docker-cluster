@@ -8,7 +8,7 @@ tar zxf apache-tomcat-9.tar.gz && \
 rm apache-tomcat-9.tar.gz && \
 mv apache-tomcat* tomcat && \
 
-wget radioapi && \
+wget https://github.com/INF2A/RPI-docker-cluster/raw/master/Docker/Api%20files/radioapi/radioapi.war && \
 mv radioapi.war /tomcat/webapps/ && \
 
 wget https://raw.githubusercontent.com/INF2A/RPI-docker-cluster/master/Docker/Api%20files/radioapi/server.xml && \
