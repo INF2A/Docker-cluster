@@ -11,7 +11,7 @@ mv apache-tomcat* tomcat && \
 wget https://github.com/INF2A/RPI-docker-cluster/raw/master/Docker/Api%20files/weatherapi/weatherapi.war && \
 mv weatherapi.war /tomcat/webapps/ && \
 
-wget https://raw.githubusercontent.com/INF2A/RPI-docker-cluster/master/Docker/Api%20files/timeapi/server.xml && \
+wget https://raw.githubusercontent.com/INF2A/RPI-docker-cluster/master/Docker/Api%20files/weatherapi/server.xml && \
 mv server.xml /tomcat/conf/server.xml && \
 rm -rf  "/tmp/*" \
         "/var/cache/apk/*"
