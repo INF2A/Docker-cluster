@@ -74,7 +74,7 @@ To use the registry you must login.
 
 Create a service with the image form the registry.
 
-    docker service create --replicas 5 -p 8080:8080 --name helloworld --with-registry-auth 192.168.1.1:5000/helloworld
+    docker service create --mode global -p 8080:8080 --name helloworld --with-registry-auth 192.168.1.1:5000/helloworld
     
 Go to the following url
 
@@ -95,7 +95,7 @@ Now push the image to the local registry.
     
 Create a service with the image form the registry.
 
-    docker service create --replicas 5 -p 8080:8080 --name helloworld --with-registry-auth 192.168.1.1:5000/helloworld
+    docker service create  --mode global -p 8080:8080 --name helloworld --with-registry-auth 192.168.1.1:5000/helloworld
     
 Go to the following url
 
