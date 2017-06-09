@@ -12,6 +12,7 @@ Ipadress | Port | Api name | Api syntax
 192.168.1.1|	:8083 | /radioapi |	/?
 192.168.1.1|	:8084 | /timeapi | /time/Europe/Amsterdam
 192.168.1.1|	:8085 | /weatherapi |	/weather/Amsterdam/metric
+192.168.1.1|  :8086 | /monitorapi | /monitor
 
 Source:https://github.com/INF2A/HelloWorldapi <br/>
 Source:https://github.com/INF2A/calendarapi <br/>
