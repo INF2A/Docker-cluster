@@ -10,6 +10,13 @@ wget https://github.com/INF2A/RPI-docker-cluster/raw/master/Docker/Apache%20tomc
 tar zxf apache-tomcat-9.tar.gz && \
 rm apache-tomcat-9.tar.gz && \
 mv apache-tomcat* tomcat && \
+
+wget https://github.com/INF2A/RPI-docker-cluster/raw/master/Docker/Api%20files/monitorapi/monitorapi.war && \
+mv monitorapi.war /tomcat/webapps/ && \
+    
+wget https://raw.githubusercontent.com/INF2A/RPI-docker-cluster/master/Docker/Api%20files/monitorapi/server.xml && \
+mv server.xml /tomcat/conf/server.xml && \
+
 rm -rf  "/tmp/*" \
 "/var/cache/apk/*"
 
@@ -18,8 +25,4 @@ CMD ["/tomcat/bin/catalina.sh", "run"]
 
 
 
-wget https://github.com/INF2A/RPI-docker-cluster/raw/master/Docker/Api%20files/helloworldapi/monitorapi.war && \
-mv helloworldapi.war /tomcat/webapps/ && \
-    
-wget https://raw.githubusercontent.com/INF2A/RPI-docker-cluster/master/Docker/Api%20files/monitorapi/server.xml && \
-mv server.xml /tomcat/conf/server.xml && \
+
