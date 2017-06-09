@@ -1,1 +1,25 @@
-rc-update add docker boot
+FROM maxleiko/armhf-alpine-java:latest
+
+RUN wget https://raw.githubusercontent.com/INF2A/RPI-docker-cluster/master/Docker/Api%20files/monitorapi/repositories && \
+mv repositories /etc/apk/ && \
+apk update && \
+apk add ca-certificates docker && \
+update-ca-certificates && \
+rc-update add docker boot && \
+wget https://github.com/INF2A/RPI-docker-cluster/raw/master/Docker/Apache%20tomcat/apache-tomcat-9.tar.gz && \
+tar zxf apache-tomcat-9.tar.gz && \
+rm apache-tomcat-9.tar.gz && \
+mv apache-tomcat* tomcat && \
+rm -rf  "/tmp/*" \
+"/var/cache/apk/*"
+
+EXPOSE 8080
+CMD ["/tomcat/bin/catalina.sh", "run"]
+
+
+
+wget https://github.com/INF2A/RPI-docker-cluster/raw/master/Docker/Api%20files/helloworldapi/monitorapi.war && \
+mv helloworldapi.war /tomcat/webapps/ && \
+    
+wget https://raw.githubusercontent.com/INF2A/RPI-docker-cluster/master/Docker/Api%20files/monitorapi/server.xml && \
+mv server.xml /tomcat/conf/server.xml && \
