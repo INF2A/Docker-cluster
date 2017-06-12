@@ -3,9 +3,9 @@ FROM maxleiko/armhf-alpine-java:latest
 RUN apk update && \
 apk add ca-certificates && \
 update-ca-certificates && \
-wget https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.0.M20/bin/apache-tomcat-9.0.0.M20.tar.gz && \
-tar zxf apache-tomcat-*.tar.gz && \
-rm apache-tomcat-*.tar.gz && \
+wget https://github.com/INF2A/RPI-docker-cluster/raw/master/Docker/Apache%20tomcat/apache-tomcat-9.tar.gz && \
+tar zxf apache-tomcat-9.tar.gz && \
+rm apache-tomcat-9.tar.gz && \
 mv apache-tomcat* tomcat && \
 
 EXPOSE 8080
