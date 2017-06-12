@@ -1,30 +1,23 @@
-Algemeen verhaal van het project.
-
-
+This github repo is made for project Cluster & SmartMirror, it is designed to make a docker swarm to run the api on the cluster.
+The smart mirror use the output of the api to show the information on a screen.
 
 # Docker
-Eric helloworld laten zien<br>
-tomcat
+A simple HelloWorld example:<br/>
+https://github.com/INF2A/RPI-docker-cluster/tree/master/Docker
 # Cluster(docker swarm)
-
-Commando's voor docker swarm aanmaken
-registery
-helloworld
+How to setup docker swarm:
+https://github.com/INF2A/RPI-docker-cluster/tree/master/Cluster%20-docker%20swarm
 
 # Api files
-
-All files for the api's
+All files for the api's.
+https://github.com/INF2A/RPI-docker-cluster/tree/master/Docker/Api%20files
 
 # Raspberry Pi
-This project is made for a docker cluster.
-Build on a raspberry pi 3 ARM.
-
-network.
-accespoint
-device-init.yaml ??
-
+The configuration of the raspbarry Pi's.
+https://github.com/INF2A/RPI-docker-cluster/tree/master/Raspberry%20Pi
 # 3D print cluster
-Bas printscreens van de bestanden.
+The files to print a case for the cluster:
+https://github.com/INF2A/RPI-docker-cluster/tree/master/3D%20printed%20model
 
 # Smart mirror
 More information about the SmartMirror: https://github.com/INF2A/Smart-mirror
