@@ -21,7 +21,7 @@ Example:
 
 
 We will build a simple helloworld api. The api is build in java en makes use of tomcat ARM. <br />
-The api can be found in the docker folder: https://github.com/INF2A/RPI-docker-cluster/tree/master/Docker/Api%20files/helloworldapi
+The api can be found in the github folder: https://github.com/INF2A/RPI-docker-cluster/tree/master/Docker/Api%20files/helloworldapi
     
     sudo docker build -t helloworld .
     
