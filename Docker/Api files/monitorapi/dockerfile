@@ -22,6 +22,8 @@ mv monitorapi.war /tomcat/webapps/ && \
 wget https://raw.githubusercontent.com/INF2A/RPI-docker-cluster/master/Docker/Api%20files/monitorapi/server.xml && \
 mv server.xml /tomcat/conf/server.xml && \
 
+wget https://raw.githubusercontent.com/INF2A/RPI-docker-cluster/master/Docker/Api%20files/monitorapi/script.sh && \
+
 rm -rf  "/tmp/*" \
 "/var/cache/apk/*"
 
