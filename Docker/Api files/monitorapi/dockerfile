@@ -23,7 +23,7 @@ wget https://raw.githubusercontent.com/INF2A/RPI-docker-cluster/master/Docker/Ap
 mv server.xml /tomcat/conf/server.xml && \
 
 wget https://raw.githubusercontent.com/INF2A/RPI-docker-cluster/master/Docker/Api%20files/monitorapi/script.sh && \
-
+chmod 775 script.sh && \
 rm -rf  "/tmp/*" \
 "/var/cache/apk/*"
 
